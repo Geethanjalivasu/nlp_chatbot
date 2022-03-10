@@ -22,7 +22,8 @@ def make_woz_datasets(bKnowledge):
     for dataset in range(len(out_names)):
         fout = open(out_names[dataset],'wt')
         for dialog in range(1,max_ins[dataset],1):
-            file_name = 'dialogues_%03d.json' % dialog
+            # Here the path to the train dialogues json
+            file_name = 'MultiWOZ_2.2/train/dialogues_%03d.json' % dialog
             print(file_name)
             with open(file_name) as f:
                 data = json.load(f)
@@ -99,7 +100,7 @@ def main():
     if tuned_model == 0:
         tuned = 'gpt2'
         test_name = 'woz.test_a.txt'
-    elif tuned_model = 1:
+    elif tuned_model == 1:
         tuned = '/home/ddemeter/CS-497/b'
         test_name = 'woz.test_b.txt'
     else:
