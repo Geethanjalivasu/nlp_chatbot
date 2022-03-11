@@ -95,16 +95,16 @@ def main():
 
     gen_mode = 0
     gen_labels = ['logits','greedy','beam','top-p']
-    tuned_model = 2
+    tuned_model = 0
     
     if tuned_model == 0:
         tuned = 'gpt2'
         test_name = 'woz.test_a.txt'
     elif tuned_model == 1:
-        tuned = '/home/ddemeter/CS-497/b'
+        tuned = '/GitHub/nlp_chatbot/b'
         test_name = 'woz.test_b.txt'
     else:
-        tuned = '/home/ddemeter/CS-497/c'
+        tuned = '/GitHub/nlp_chatbot/c'
         test_name = 'woz.test_c.txt'
     
     tokenizer = GPT2Tokenizer.from_pretrained(tuned)
